@@ -1,4 +1,4 @@
-// File: /home/yogesh/Desktop/Inventry Management System/app/layout.js
+// File: /home/yogesh/web development/Inventry-Management-System/app/layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

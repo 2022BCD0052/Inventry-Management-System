@@ -1,4 +1,3 @@
 {
-  "/page": "app/page.js",
-  "/(back-office)/inventory-dashboard/home/dashboard/page": "app/(back-office)/inventory-dashboard/home/dashboard/page.js"
+  "/(back-office)/inventory-dashboard/inventory/catogeries/new/page": "app/(back-office)/inventory-dashboard/inventory/catogeries/new/page.js"
 }

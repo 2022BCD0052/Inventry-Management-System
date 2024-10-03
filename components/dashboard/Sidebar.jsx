@@ -21,15 +21,23 @@ import SidebarDropDownLink from "./SidebarDropDownLink";
 const InventoryLink = [
   {
     title: "Items",
-    href: "/inventory-dashboard/inventory",
+    href: "/inventory-dashboard/inventory/items/new",
   },
   {
-    title: "Item Groups",
-    href: "",
+    title: "Catogeries",
+    href: "/inventory-dashboard/inventory/catogeries/new",
   },
   {
-    title: "Inventory Adjustment",
-    href: "",
+    title: "units",
+    href: "/inventory-dashboard/inventory/units/new",
+  },
+  {
+    title: "warehouse",
+    href: "/inventory-dashboard/inventory/warehouse/new",
+  },
+  {
+    title: "Adjustments",
+    href: "/inventory-dashboard/inventory/adjustments/new",
   },
 ];
 
