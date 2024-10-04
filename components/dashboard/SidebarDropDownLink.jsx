@@ -25,7 +25,7 @@ const SidebarDropDownLink = ({title,items, icon:Icon}) => {
                 <CollapsibleContent className="flex-col items-center justify-between">
                   {items.map((item, index) => {
                     return (
-                      <div className=" pl-6">
+                      <div className=" pl-6" key={index}>
                         <CollapsibleLink href={item.href} title={item.title} />
                       </div>
                     );

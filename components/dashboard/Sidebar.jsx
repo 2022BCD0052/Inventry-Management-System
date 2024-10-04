@@ -21,7 +21,7 @@ import SidebarDropDownLink from "./SidebarDropDownLink";
 const InventoryLink = [
   {
     title: "Items",
-    href: "/inventory-dashboard/inventory/items/new",
+    href: "/inventory-dashboard/inventory",
   },
   {
     title: "Catogeries",
@@ -34,6 +34,9 @@ const InventoryLink = [
   {
     title: "warehouse",
     href: "/inventory-dashboard/inventory/warehouse/new",
+  }, {
+    title: "brands",
+    href: "/inventory-dashboard/inventory/brands/new",
   },
   {
     title: "Adjustments",
@@ -103,7 +106,7 @@ const Sidebar = () => {
                 <span>Home</span>
               </Link>
 
-              <SidebarDropDownLink items={InventoryLink} title='Inventory' icon={BaggageClaim}/>
+              <SidebarDropDownLink items={InventoryLink} title='Inventory' icon={BaggageClaim} />
               <SidebarDropDownLink items={salesLinks} title='Sales' icon={ShoppingBasket}/>
 
             </div>
