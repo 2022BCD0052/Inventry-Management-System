@@ -7,14 +7,26 @@ export default async function NewItem() {
   const unitsData = getData("units")|| [];
   const brandsData = getData("brands")|| [];
   const suppliersData = getData("suppliers")|| [];
-  const warehousesData = getData(" warehouse")|| [];
+  const warehousesData = getData("warehouse")|| [];
+
+  // const warehouse = [
+  //   {
+  //     value: "adglkgrggkgrkrgkggj",
+  //     label: "WareHouse A",
+  //   },
+  //   {
+  //     value: "hkgkogkfoknlkglkefkkk",
+  //     label: "WareHouse b",
+  //   },
+  // ];
+
+
   // parallel fetching
 
-  const [categories, units, brands, suppliers, warehouses] = await Promise.all([
+  const [categories, units, brands, suppliers,warehouses] = await Promise.all([
     categoriesData,
     unitsData,
     brandsData,
-
     suppliersData,
     warehousesData,
   ]);

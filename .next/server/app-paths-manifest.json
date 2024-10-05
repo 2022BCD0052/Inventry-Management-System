@@ -1,5 +1,6 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/(back-office)/inventory-dashboard/inventory/items/new/page": "app/(back-office)/inventory-dashboard/inventory/items/new/page.js",
-  "/(back-office)/inventory-dashboard/inventory/warehouse/new/page": "app/(back-office)/inventory-dashboard/inventory/warehouse/new/page.js"
+  "/api/uploadthing/route": "app/api/uploadthing/route.js",
+  "/api/items/route": "app/api/items/route.js",
+  "/(back-office)/inventory-dashboard/inventory/items/new/page": "app/(back-office)/inventory-dashboard/inventory/items/new/page.js"
 }

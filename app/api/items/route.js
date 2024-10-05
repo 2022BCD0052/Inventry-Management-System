@@ -27,7 +27,7 @@ export async function POST(request) {
         sellingPrice:parseFloat(itemData.sellingPrice),
       },
     });
-    console.log(data);
+    console.log(itemData);
     return NextResponse.json(item);
   } catch (error) {
     console.log(error);
@@ -43,14 +43,16 @@ export async function POST(request) {
   }
 }
 
+
+
+
 export async function GET(request) {
   try {
-    const items = await db.items.findMany({
-      orderBy: {
-        createdAt: "desc",
-      },
+    const items = await db.item.findMany({
+      orderBy:{
+        createdAt:'desc'
+      }
     });
-    console.log(categories);
     return NextResponse.json(items);
   } catch (error) {
     console.log(error);

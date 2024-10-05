@@ -32,6 +32,7 @@ export default  function CreateItemForm({
   const [loading, setLoading] = useState(false);
 
   async function onSubmit(data) {
+    data.imageUrl = imageUrl;
     console.log("Submitting data:", data);
     await makeApiRequest({
       setLoading,
@@ -191,13 +192,13 @@ export default  function CreateItemForm({
         />
 
         {/* Upload thing */}
-        {/* <div className="col-span-2">
+        <div className="col-span-2">
          <UploadDropzone
           endpoint="imageUploader"  // Your API endpoint for uploading images
           onClientUploadComplete={(res) => {
             // Set imageUrl to the correct URL from the response
             setImageUrl(res[0].url);
-            console.log("Files: ", res);
+            console.log("Files: ", res[0].url);
             alert("Upload Completed");
           }}
           onUploadError={(error) => {
@@ -205,13 +206,13 @@ export default  function CreateItemForm({
             alert(`ERROR! ${error.message}`);
           }}
         />
-    </div> */}
+    </div>
 
-        <ImageInput
+        {/* <ImageInput
           label="Item Data"
           imageUrl={imageUrl}
           setImageUrl={setImageUrl}
-        />
+        /> */}
       </div>
 
       <SubmitButton isLoading={loading} title=" item" type="submit" />

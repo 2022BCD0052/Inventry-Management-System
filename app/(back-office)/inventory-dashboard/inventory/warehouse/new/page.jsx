@@ -64,8 +64,8 @@ const NewWareHouse = () => {
           className="w-full"/>
 
           <TextInputs
+           name="title"
             label="Warehouse Title"
-            name="title"
             register={register}
             errors={errors}
             isRequired={true}
