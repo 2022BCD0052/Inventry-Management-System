@@ -5,6 +5,8 @@ import SubmitButton from "@/components/FormInputs/SubmitButton";
 import TextAreaInput from "@/components/FormInputs/TextAreaInput";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+import { makeApiRequest } from "@/lib/makePostRequest";
 
 const NewUnit = () => {
   const {
@@ -17,32 +19,14 @@ const NewUnit = () => {
   const [loading, setLoading] = useState(false);
 
   async function onSubmit(data) {
-    console.log("Submitting data:", data); // Debugging log
-    setLoading(true);
-    const baseUrl = "/http://localhost:3000";
-    
-    try {
-      const response = await fetch(`/api/units/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-      console.log(response);
-
-      if (response.ok) {
-        alert("Category created successfully");
-        reset();
-      } else {
-        alert("Failed to create category");
-      }
-    } catch (error) {
-      alert("An error occurred while creating the category");
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
+    console.log("Submitting data:", data);
+    await makeApiRequest({
+      setLoading,
+      endpoint: "api/units", 
+      data, 
+      resourceName: "Units", 
+      reset
+    });
   }
 
   return (

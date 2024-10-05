@@ -6,6 +6,8 @@ import SubmitButton from "@/components/FormInputs/SubmitButton";
 import TextAreaInput from "@/components/FormInputs/TextAreaInput";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+import { makeApiRequest } from "@/lib/makePostRequest";
 
 
 
@@ -13,11 +15,11 @@ import { useForm } from "react-hook-form";
 const selectOptions = [
   {
     value: "Main",
-    label: "Main",
+    title: "Main",
   },
   {
     value: "Branch",
-    label: "Branch",
+    title: "Branch",
   },
 
 ]
@@ -32,32 +34,14 @@ const NewWareHouse = () => {
   const [loading, setLoading] = useState(false);
 
   async function onSubmit(data) {
-    console.log("Submitting data:", data); // Debugging log
-    setLoading(true);
-    const baseUrl = "/http://localhost:3000";
-
-    try {
-      const response = await fetch(`/api/warehouse/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-      console.log(response);
-
-      if (response.ok) {
-        alert("Category created successfully");
-        reset();
-      } else {
-        alert("Failed to create category");
-      }
-    } catch (error) {
-      alert("An error occurred while creating the category");
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
+    console.log("Submitting data:", data);
+    await makeApiRequest({
+      setLoading,
+      endpoint: "api/warehouse", 
+      data, 
+      resourceName: "WareHouse", 
+      reset
+    });
   }
 
   return (
@@ -73,7 +57,7 @@ const NewWareHouse = () => {
         <div className="grid gap-6 sm:grid-cols-2  sm:gap-6 grid-cols-1">
           
           <SelectInput 
-          name="type"
+          name="warehouseType"
           register={register}
           label="Select Warehouse Type"
           options={selectOptions}
@@ -106,7 +90,7 @@ const NewWareHouse = () => {
           className="w-full"
         />
 
-        <SubmitButton isLoading={loading} title="Save Unit" type="submit" />
+        <SubmitButton isLoading={loading} title=" Unit" type="submit" />
       </form>
     </div>
   );

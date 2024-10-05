@@ -1,8 +1,5 @@
 {
-  "/api/categories/route": "app/api/categories/route.js",
-  "/(back-office)/inventory-dashboard/inventory/page": "app/(back-office)/inventory-dashboard/inventory/page.js",
-  "/(back-office)/inventory-dashboard/inventory/adjustments/new/page": "app/(back-office)/inventory-dashboard/inventory/adjustments/new/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/(back-office)/inventory-dashboard/inventory/items/new/page": "app/(back-office)/inventory-dashboard/inventory/items/new/page.js",
-  "/(back-office)/inventory-dashboard/inventory/catogeries/new/page": "app/(back-office)/inventory-dashboard/inventory/catogeries/new/page.js",
-  "/(back-office)/inventory-dashboard/inventory/brands/new/page": "app/(back-office)/inventory-dashboard/inventory/brands/new/page.js"
+  "/(back-office)/inventory-dashboard/inventory/warehouse/new/page": "app/(back-office)/inventory-dashboard/inventory/warehouse/new/page.js"
 }

@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/(back-office)/inventory-dashboard/inventory/items/new/page": [
+    "/(back-office)/inventory-dashboard/inventory/suppliers/new/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(back-office)/inventory-dashboard/inventory/items/new/page.js"
+      "static/chunks/app/(back-office)/inventory-dashboard/inventory/suppliers/new/page.js"
     ],
     "/(back-office)/layout": [
       "static/chunks/webpack.js",
@@ -15,16 +15,6 @@
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
-    ],
-    "/(back-office)/inventory-dashboard/inventory/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(back-office)/inventory-dashboard/inventory/page.js"
-    ],
-    "/(back-office)/inventory-dashboard/inventory/catogeries/new/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(back-office)/inventory-dashboard/inventory/catogeries/new/page.js"
     ],
     "/(back-office)/inventory-dashboard/inventory/adjustments/new/page": [
       "static/chunks/webpack.js",
@@ -41,10 +31,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(back-office)/inventory-dashboard/inventory/warehouse/new/page.js"
     ],
-    "/(back-office)/inventory-dashboard/inventory/units/new/page": [
+    "/(back-office)/inventory-dashboard/inventory/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(back-office)/inventory-dashboard/inventory/units/new/page.js"
+      "static/chunks/app/(back-office)/inventory-dashboard/inventory/page.js"
+    ],
+    "/(back-office)/inventory-dashboard/inventory/items/new/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(back-office)/inventory-dashboard/inventory/items/new/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

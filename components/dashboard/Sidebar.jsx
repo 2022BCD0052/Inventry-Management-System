@@ -42,6 +42,10 @@ const InventoryLink = [
     title: "Adjustments",
     href: "/inventory-dashboard/inventory/adjustments/new",
   },
+  {
+    title: "Suppliers",
+    href: "/inventory-dashboard/inventory/suppliers/new",
+  },
 ];
 
 const salesLinks = [
